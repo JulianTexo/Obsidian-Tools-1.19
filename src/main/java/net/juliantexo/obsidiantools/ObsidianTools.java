@@ -1,7 +1,9 @@
 package net.juliantexo.obsidiantools;
 
 import com.mojang.logging.LogUtils;
+import net.juliantexo.obsidiantools.block.VanillaBlocks;
 import net.juliantexo.obsidiantools.item.ModItems;
+import net.juliantexo.obsidiantools.item.VanillaItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,7 +23,12 @@ public class ObsidianTools
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        //new mod stuff
         ModItems.register(modEventBus);
+
+        //overridden vanilla stuff
+        VanillaItems.register(modEventBus);
+        VanillaBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

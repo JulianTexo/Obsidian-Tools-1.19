@@ -2,6 +2,7 @@ package net.juliantexo.obsidiantools.item;
 
 import net.juliantexo.obsidiantools.ObsidianTools;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,7 +20,7 @@ public class ModItems {
     public static final RegistryObject<Item> OBSIDIAN_HOE = ITEMS.register("obsidian_hoe", () -> new HoeItem(ModTiers.OBSIDIAN, 2, 3f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
 
 
-    //OTHERS
+    //ITEMS
     public static final RegistryObject<Item> OBSIDIAN_CHUNK = ITEMS.register("obsidian_chunk", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 
