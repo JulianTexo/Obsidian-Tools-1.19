@@ -1,6 +1,7 @@
 package net.juliantexo.obsidiantools;
 
 import com.mojang.logging.LogUtils;
+import net.juliantexo.obsidiantools.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,6 +20,8 @@ public class ObsidianTools
     public ObsidianTools()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
